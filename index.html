@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Future Skills Survey</title>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+
+  .container {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 600px;
+    color: white;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  p {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+  }
+
+  input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: none;
+  }
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+  }
+
+  .option-group {
+    margin-top: 8px;
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background: #ff7eb3;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    background: #ff4f93;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1 id="title">Future Skills Survey</h1>
+
+  <p id="description">
+    Help us understand which skills matter most for tomorrow’s careers.
+  </p>
+
+  <form id="survey-form">
+
+    <!-- Name -->
+    <label id="name-label" for="name">Full Name</label>
+    <input 
+      type="text" 
+      id="name" 
+      placeholder="Enter your full name" 
+      required
+    >
+
+    <!-- Email -->
+    <label id="email-label" for="email">Email Address</label>
+    <input 
+      type="email" 
+      id="email" 
+      placeholder="Enter your email address" 
+      required
+    >
+
+    <!-- Number -->
+    <label id="number-label" for="number">Age (15 - 60)</label>
+    <input 
+      type="number" 
+      id="number" 
+      placeholder="Enter your age"
+      min="15"
+      max="60"
+    >
+
+    <!-- Dropdown -->
+    <label for="dropdown">Which field interests you most?</label>
+    <select id="dropdown">
+      <option value="">Select an option</option>
+      <option value="ai">Artificial Intelligence</option>
+      <option value="business">Business & Entrepreneurship</option>
+      <option value="design">UI/UX Design</option>
+    </select>
+
+    <!-- Radio Buttons -->
+    <label>Are you currently learning new skills?</label>
+    <div class="option-group">
+      <input type="radio" name="learning" value="yes"> Yes
+    </div>
+    <div class="option-group">
+      <input type="radio" name="learning" value="no"> No
+    </div>
+
+    <!-- Checkboxes -->
+    <label>Which skills are you working on? (Select all that apply)</label>
+    <div class="option-group">
+      <input type="checkbox" value="coding"> Coding
+    </div>
+    <div class="option-group">
+      <input type="checkbox" value="communication"> Communication
+    </div>
+    <div class="option-group">
+      <input type="checkbox" value="marketing"> Digital Marketing
+    </div>
+
+    
+    <label for="comments">Additional Comments</label>
+    <textarea 
+      id="comments" 
+      rows="4"
+      placeholder="Share your thoughts..."
+    ></textarea>
+
+    <!-- Submit -->
+    <button id="submit" type="submit">Submit Survey</button>
+
+  </form>
+
+</div>
+
+</body>
+</html>
